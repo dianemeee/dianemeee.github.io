@@ -22,6 +22,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://cdn.rawgit.com/aparshin/leaflet-boundary-canvas/f00b4d35/src/BoundaryCanvas.js"></script>
   <script src="assets/js/leaflet.ajax.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -248,9 +249,19 @@ function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
 
+// var map = L.map("map");
 
-var map = L.map('map').setView([-1.63949,132.28638], 10);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+// $.getJSON('assets/geojson/sorsel1.geojson').then(function(geoJSON) {
+//   var osm = new L.TileLayer.BoundaryCanvas("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+//     boundary: geoJSON,
+//     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, UK shape <a href="https://github.com/johan/world.geo.json">johan/word.geo.json</a>'
+//   });
+//   map.addLayer(osm);
+//   var ukLayer = L.geoJSON(geoJSON);
+//   map.fitBounds(ukLayer.getBounds());
+// });
+var map = L.map('map').setView([-1.63949, 132.28638], 10);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
@@ -259,21 +270,46 @@ var map = L.map('map').setView([-1.63949,132.28638], 10);
     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
 }).addTo(map);
 
+var markers = [
+  {lat: -1.126554, lng: 132.015484, name: "Distrik Fokour<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -1.196927, lng: 131.932680, name: "Distrik Sawiat<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -1.391602, lng: 131.972203, name: "Distrik Seremuk<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -1.418412, lng: 132.047973, name: "Distrik Teminabuan<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -1.539788, lng: 132.150002, name: "Distrik Wayer<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -1.576880, lng: 132.014773, name: "Distrik Konda<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -1.517235, lng: 132.251178, name: "Distrik Moswaren<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -1.756552, lng: 132.203253, name: "Distrik Kais<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -1.979353, lng: 132.156358, name: "Distrik Matemani<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -2.162970, lng: 132.366177, name: "Distrik Kokoda<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -1.975350, lng: 132.398148, name: "Distrik Kokoda Utara<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."},
+  {lat: -2.096442, lng: 132.221876, name: "Distrik Inanwatan<br>Data Penduduk: xxx.xxx.xxx<br>Data Lain..."}
+];
+
+markers.forEach(function(marker) {
+  var m = L.marker([marker.lat, marker.lng]).addTo(map);
+  m.bindPopup("<b>" + marker.name + "</b>");
+  m.on('click', function(e) {
+    m.openPopup();
+  });
+});
+
+
 var styleku = {
     "color": "red",
-    "weight" : 3
-}
+    "weight": 3
+};
 
-function popUp(f,l){
+function popUp(f, l) {
     var out = [];
-    if (f.properties){
-        for(key in f.properties){
-            out.push(key+": "+"<b>"+f.properties[key]+"</b>");
+    if (f.properties) {
+        for (key in f.properties) {
+            out.push(key + ": " + "<b>" + f.properties[key] + "</b>");
         }
         l.bindPopup(out.join("<br />"));
     }
 }
-var geojson = new L.GeoJSON.AJAX(["assets/geojson/sorsel1.geojson"],{onEachFeature:popUp}).addTo(map);
+
+var geojson = new L.GeoJSON.AJAX(["assets/geojson/sorselex.geojson"],{onEachFeature:popUp}).addTo(map);
 </script>
      
 <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
