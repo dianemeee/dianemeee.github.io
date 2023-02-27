@@ -16,8 +16,37 @@ body {
   z-index: 999;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
+  padding: 0 15px 15px;
 }
 
 #sidebar.active {
   transform: translateX(0%);
 }
+a{
+  color: 4c4c4c;
+}
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+ }
+ .bottom-buffer{
+  margin-bottom: 38px;
+ }
+ .sidebar-menu{
+  padding-top: 20px;
+ }
+ .kejadian-content{
+  margin-top: -15;
+  padding-top: auto;
+  padding-left: 20px;
+ }
+ .jelajahi{
+  padding-bottom: 15px;
+ }
+ .list-sidebar{
+  margin-bottom: 10px;
+ }
