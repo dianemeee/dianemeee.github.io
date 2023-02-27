@@ -6,3 +6,4 @@
     $('#closeSidebar').click(function () {
       $('#sidebar').removeClass('active');
     });
+  });
