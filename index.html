@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <meta charset="utf-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>GIS Sorong Selatan</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://cdn.rawgit.com/aparshin/leaflet-boundary-canvas/f00b4d35/src/BoundaryCanvas.js"></script>
+  <script src="assets/js/leaflet.ajax.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<!-- navbar -->
+
+<a class="navbar-brand" href="#">
+  <div class="logo-container">
+    <img src="assets/img/logo.png" class="logo-img me-2" style="height: 50%; width: 55%;">
+  </div>
+</a>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark" style="padding-bottom: 10px; padding-top: 10px;">
+        <button type="button" class="btn btn-secondary" style="background: none; border-style: none;" id="sidebarToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+            </svg>
+          </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample06">
+        <ul class="navbar-nav mr-auto" style="margin-left: 20px;">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Data Bencana</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Infografis</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown06">
+              <a class="dropdown-item" href="#">Tahunan</a>
+              <a class="dropdown-item" href="#">Bulanan</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-md-0">
+          <input class="form-control" type="text" placeholder="Search">
+        </form>
+      </div>
+    </nav>
+    <div id="sidebar" class="bg-light" style="opacity: 90%;">
+      <button type="button" class="btn btn-secondary" style="background: none;border-style: none;padding-top: 30px;padding-left: 10px; color: black;" id="closeSidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 7.293L3.146 2.44a1 1 0 1 1 1.414-1.414L9 5.879l4.439-4.439a1 1 0 1 1 1.414 1.414L10.414 7.293l4.44 4.439a1 1 0 0 1-1.414 1.414L9 8.707l-4.439 4.44a1 1 0 0 1-1.414-1.414L7.586 7.293z"></path>
+        </svg>
+      </button>
+      <div class="sidebar-menu">
+      <ul class="menu">
+        <li class="bottom-buffer">
+          <h5><i class="bi bi-box-arrow-in-right"></i><a href="#" style="padding-left: 10; text-decoration: none;">Masuk</a></h5>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="jelajahi">
+    Jelajahi
+    </div>
+        <ul>
+          <li class="list-sidebar">
+            <i class="bi bi-database"></i><a href="#" style="padding-left: 10; text-decoration: none;">Data</a>
+          </li>
+          <li class="list-sidebar">
+            <i class="bi bi-file-earmark-fill"></i><a href="#" style="padding-left: 10; text-decoration: none;">Dokumen</a>
+          </li>
+          <li class="list-sidebar">
+            <i class="bi bi-pin-map"></i><a href="#" style="padding-left: 10; text-decoration: none;">Aplikasi & Peta</a>
+          </li>
+        </ul>
+      </div>
+
+<style>
+    /* #maps{
+        position: relative;
+        border: 1px solid black;
+        border-radius: 8px;
+        height: 600px;
+        width: 80%;
+        margin: auto;
+    } */
+    #map{
+      width: 99%;
+      height: 80%;
+      position: relative;
+      border-style: solid;
+      z-index: 0;
+      margin: 0px;
+      padding: 0px;
+      margin: auto;
+      padding-bottom: 30px;
+    }
+</style>
+
+<!--SideBar Kiri-->
+<div id="myNav" class="overlay">
+  <div class="overlay-content">
+        
+  <h1 style="text-align:center;color:white;background-color:#ee7942;font-size:calc(2px + 1.3vw);font-family:Roboto;"><b>Data Kependudukan<br>Sorong Selatan</h1>
+  <h1 style="text-align:center;color:white;font-size:calc(4px + 0.8vw);background-color:#990033;font-family:Roboto;"><b>Data Wilayah</b></h1>
+  <table >
+    <tbody>
+      <tr>
+        <td><img class="img-fluid" src="https://gis.bnpb.go.id/Images/icon/people_dead_60px.png" alt="Responsive image" width="32px" height="auto"  style="padding-bottom: 20px;"></td>
+        <td><p class="small" style="text-align:left;color:black;font-size:calc(4px + 1vw);font-family:Roboto;"><b>14</b><br><br><text style="text-align:left;color:black;font-size:calc(4px + 0.5vw);font-family:Roboto;"> Distrik</text></p></td>
+        <td><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;opacity:0;">000</text></td>
+        <td><img class="img-fluid" src="https://gis.bnpb.go.id/Images/icon/people_missing_60px.png" alt="Responsive image" width="32px" height="auto"  style="padding-bottom: 20px;"></td>
+        <td><p class="small" style="text-align:left;color:black;font-size:calc(4px + 1vw);font-family:Roboto;"><b>3</b><br><br><text style="text-align:left;color:black;font-size:calc(4px + 0.5vw);font-family:Roboto;">Kelurahan</text></p></td>
+      </tr>
+      <tr>
+        <td><img class="img-fluid" src="https://gis.bnpb.go.id/Images/icon/people_injured_60px.png" alt="Responsive image" width="32px" height="auto"  style="padding-bottom: 20px;"></td>
+        <td><p class="small" style="text-align:left;color:black;font-size:calc(4px + 1vw);font-family:Roboto;"><b>210</b><br><br><text style="text-align:left;color:black;font-size:calc(4px + 0.5vw);font-family:Roboto;">Desa</text></p></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h1 style="text-align:left;color:black;font-size:calc(4px + 0.6vw);font-family:Roboto;"><b>Data Wilayah</b></h1>
+  <table >
+    <tbody>
+      <tr>
+        <td><img class="img-fluid" src="https://gis.bnpb.go.id/Images/icon/people_dead_60px.png" alt="Responsive image" width="32px" height="auto" style="padding-bottom: 20px;"></td>
+        <td><p class="small" style="text-align:left;color:black;font-size:calc(4px + 1vw);font-family:Roboto;"><b>69,212.00</b><br><br><text style="text-align:left;color:black;font-size:calc(4px + 0.5vw);font-family:Roboto;"> Luas Wilayah (km2)</text></p></td>
+        <td><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;opacity:0;">000</text></td>
+        <td><img class="img-fluid" src="https://gis.bnpb.go.id/Images/icon/people_missing_60px.png" alt="Responsive image" width="32px" height="auto" style="padding-bottom: 20px;"></td>
+        <td><p class="small" style="text-align:left;color:black;font-size:calc(4px + 1vw);font-family:Roboto;"><b>10</b><br><br><text style="text-align:left;color:black;font-size:calc(4px + 0.5vw);font-family:Roboto;">Kepadatan Penduduk</text></p></td>
+      </tr>
+    </tbody>
+  </table>
+  <h1 style="text-align:center;color:white;font-size:calc(4px + 0.8vw);background-color:#990033;font-family:Roboto;"><b>Data Kependudukan</b></h1>
+  <table>
+    <tbody>
+      <tr>
+        <td><img class="img-fluid" src="https://gis.bnpb.go.id/Images/icon/damage_house_destroyed_red_60px.png" alt="Responsive image" width="40px" height="auto"  style="padding-bottom: 20px;"></td>
+        <td><p class="small" style="text-align:left;color:black;font-size:calc(4px + 1vw);font-family:Roboto;"><b>226,218</b><br><br><text style="text-align:left;color:black;font-size:calc(4px + 0.5vw);font-family:Roboto;">Kepala Keluarga</text></p></td>
+        <td><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;opacity:0;">000</text></td>
+        <td><img class="img-fluid" src="https://gis.bnpb.go.id/Images/icon/damage_house_destroyed_orange_60px.png" alt="Responsive image" width="40px" height="auto"  style="padding-bottom: 20px;"></td>
+        <td><p class="small" style="text-align:left;color:black;font-size:calc(4px + 1vw);font-family:Roboto;"><b>1,021,512</b><br><br><text style="text-align:left;color:black;font-size:calc(4px + 0.5vw);font-family:Roboto;">Jumlah Penduduk</text></p></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1 style="text-align:left;color:black;font-size:calc(4px + 0.4vw);font-family:Roboto;">Update : 2023-02-27</h1>
+  </div>  
+</div>
+
+<!--sidebar kanan-->
+<div id="myNav" class="overlay-right" style="height: auto; top: 270px;">
+  <div class="overlay-content">
+      
+      
+        <h1 style="text-align:center;color:white;background-color:#ee7942;font-size:calc(4px + 0.9vw);font-family:Roboto;"><b>Jumlah Kejadian<br>per Jenis Bencana</h1>
+        <h1 style="text-align:center;color:white;font-size:calc(4px + 0.7vw);background-color:#990033;font-family:Roboto;"><b>Bencana Alam</b></h1>
+        <table>
+          <tbody>
+            <tr>
+              <td><p class="small" style="text-align:left;color:black;font-size:3vw;font-family:Roboto;"><img class="img-fluid" src="assets/img/gempa.png" width="30" height="auto"></p></td>
+              <td><p class="small" style="text-align:left;color:#800000;font-size:calc(4px + 0.7vw);font-family:Roboto;"><b>9</b><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;"> Gempabumi</text></p></td>
+            </tr>
+            <tr>
+              <td><p class="small" style="text-align:left;color:black;font-size:3vw;font-family:Roboto;"><img class="img-fluid" src="assets/img/gunungapi.png" width="30" height="auto"></p></td>
+              <td><p class="small" style="text-align:left;color:#800000;font-size:calc(4px + 0.7vw);font-family:Roboto;"><b>1</b><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;"> Gunungapi</text></p></td>
+            </tr>
+            <tr>
+              <td><p class="small" style="text-align:left;color:black;font-size:3vw;font-family:Roboto;"><img class="img-fluid" src="assets/img/karhutla.png" width="30" height="auto"></p></td>
+              <td><p class="small" style="text-align:left;color:#800000;font-size:calc(4px + 0.7vw);font-family:Roboto;"><b>32</b><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;"> Karhutla</text></p></td>
+            </tr>
+            <tr>
+              <td><p class="small" style="text-align:left;color:black;font-size:3vw;font-family:Roboto;"><img class="img-fluid" src="assets/img/kekeringan.png" width="30" height="auto"></p></td>
+              <td><p class="small" style="text-align:left;color:#800000;font-size:calc(4px + 0.7vw);font-family:Roboto;"><b>0</b><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;"> Kekeringan</text></p></td>
+            </tr>
+            <tr>
+              <td><p class="small" style="text-align:left;color:black;font-size:3vw;font-family:Roboto;"><img class="img-fluid" src="assets/img/banjir.png" width="30" height="auto"></p></td>
+              <td><p class="small" style="text-align:left;color:#800000;font-size:calc(4px + 0.7vw);font-family:Roboto;"><b>195</b><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;"> Banjir</text></p></td>
+            </tr>
+            <tr>
+              <td><p class="small" style="text-align:left;color:black;font-size:3vw;font-family:Roboto;"><img class="img-fluid" src="assets/img/longsor.png" width="30" height="auto"></p></td>
+              <td><p class="small" style="text-align:left;color:#800000;font-size:calc(4px + 0.7vw);font-family:Roboto;"><b>85</b><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;"> Tanah Longsor</text></p></td>
+            </tr>
+            <tr>
+              <td><p class="small" style="text-align:left;color:black;font-size:3vw;font-family:Roboto;"><img class="img-fluid" src="assets/img/cuacaekstrem.png" width="30" height="auto"></p></td>
+              <td><p class="small" style="text-align:left;color:#800000;font-size:calc(4px + 0.7vw);font-family:Roboto;"><b>154</b><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;"> Cuaca Ekstrem</text></p></td>
+            </tr>
+            <tr>
+              <td><p class="small" style="text-align:left;color:black;font-size:3vw;font-family:Roboto;"><img class="img-fluid" src="assets/img/abrasi.png" width="27" height="auto"></p></td>
+              <td><p class="small" style="text-align:left;color:#800000;font-size:calc(4px + 0.7vw);font-family:Roboto;"><b>7</b><text style="text-align:left;color:black;font-size:calc(4px + 0.7vw);font-family:Roboto;"> Gel. Pasang/Abrasi</text></p></td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>
+<div id="map" class="container-fluid"></div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "18%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+// var map = L.map("map");
+
+// $.getJSON('assets/geojson/sorsel1.geojson').then(function(geoJSON) {
+//   var osm = new L.TileLayer.BoundaryCanvas("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+//     boundary: geoJSON,
+//     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, UK shape <a href="https://github.com/johan/world.geo.json">johan/word.geo.json</a>'
+//   });
+//   map.addLayer(osm);
+//   var ukLayer = L.geoJSON(geoJSON);
+//   map.fitBounds(ukLayer.getBounds());
+// });
+
+var map = L.map('map').setView([-1.63949, 132.28638], 10);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+}).addTo(map);
+
+var markers = [
+  {lat: -1.126554, lng: 132.015484, name: "Distrik Fokour<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button>"},
+  {lat: -1.196927, lng: 131.932680, name: "Distrik Sawiat<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -1.391602, lng: 131.972203, name: "Distrik Seremuk<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -1.418412, lng: 132.047973, name: "Distrik Teminabuan<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -1.539788, lng: 132.150002, name: "Distrik Wayer<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -1.576880, lng: 132.014773, name: "Distrik Konda<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -1.517235, lng: 132.251178, name: "Distrik Moswaren<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -1.756552, lng: 132.203253, name: "Distrik Kais<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -1.979353, lng: 132.156358, name: "Distrik Matemani<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -2.162970, lng: 132.366177, name: "Distrik Kokoda<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -1.975350, lng: 132.398148, name: "Distrik Kokoda Utara<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+  {lat: -2.096442, lng: 132.221876, name: "Distrik Inanwatan<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail Lain </a></button"},
+];
+
+// membuat marker dan tooltip
+for (var i = 0; i < markers.length; i++) {
+  var marker = L.marker([markers[i].lat, markers[i].lng]).addTo(map);
+  var tooltip = L.tooltip({
+    permanent: true,
+    direction: 'top'
+  }).setContent(markers[i].name.split('<br>')[0]).setLatLng([markers[i].lat, markers[i].lng]).addTo(map);
+}
+
+markers.forEach(function(marker) {
+  var m = L.marker([marker.lat, marker.lng]).addTo(map);
+  m.bindPopup("<b>" + marker.name + "</b>");
+  m.on('click', function(e) {
+    m.openPopup();
+  });
+});
+
+
+var styleku = {
+    "color": "red",
+    "weight": 3
+};
+
+function popUp(f, l) {
+    var out = [];
+    if (f.properties) {
+        for (key in f.properties) {
+            out.push(key + ": " + "<b>" + f.properties[key] + "</b>");
+        }
+        l.bindPopup(out.join("<br />"));
+    }
+}
+
+var geojson = new L.GeoJSON.AJAX(["assets/geojson/sorselex.geojson"],{onEachFeature:popUp}).addTo(map);
+</script>
+     
+<script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+<script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
