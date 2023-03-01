@@ -76,7 +76,7 @@
       <div class="sidebar-menu">
       <ul class="menu">
         <li class="bottom-buffer">
-          <h5><i class="bi bi-box-arrow-in-right"></i><a href="#" style="padding-left: 10; text-decoration: none;">Masuk</a></h5>
+          <h5><i class="fa-solid fa-right-to-bracket" ></i><a href="#" style="padding-left: 10px; text-decoration: none;">Masuk</a></h5>
         </li>
       </ul>
     </div>
@@ -86,13 +86,13 @@
     </div>
         <ul>
           <li class="list-sidebar">
-            <i class="bi bi-database"></i><a href="#" style="padding-left: 10; text-decoration: none;">Data</a>
+            <i class="fa-solid fa-database" style="padding-right: 12px;"></i><a href="#" style="text-decoration: none;">Data</a>
           </li>
           <li class="list-sidebar">
-            <i class="bi bi-file-earmark-fill"></i><a href="#" style="padding-left: 10; text-decoration: none;">Dokumen</a>
+            <i class="fa-solid fa-file" style="padding-right: 15px;"></i><a href="#" style="text-decoration: none;">Dokumen</a>
           </li>
           <li class="list-sidebar">
-            <i class="bi bi-pin-map"></i><a href="#" style="padding-left: 10; text-decoration: none;">Aplikasi & Peta</a>
+            <i class="fa-solid fa-map-location-dot" style="padding-right: 10px;"></i><a href="#" style="text-decoration: none;">Aplikasi & Peta</a>
           </li>
         </ul>
       </div>
@@ -121,10 +121,10 @@
 
 <!--SideBar Kiri-->
 <div id="myNav" class="overlay">
+  
   <div class="overlay-content">
-        
-  <h1 style="text-align:center;color:white;background-color:#ee7942;font-size:calc(2px + 1.3vw);font-family:Roboto;"><b>Data Kependudukan<br>Sorong Selatan</h1>
-  <h1 style="text-align:center;color:white;font-size:calc(4px + 0.8vw);background-color:#990033;font-family:Roboto;"><b>Data Wilayah</b></h1>
+  <h1 style="text-align:center;color:white;background-color:#347aeb;font-size:calc(2px + 1.3vw);font-family:Roboto;"><b>Data Kependudukan<br>Sorong Selatan</h1>
+  <h1 style="text-align:center;color:white;font-size:calc(4px + 0.8vw);background-color:#942237;font-family:Roboto;"><b>Data Wilayah</b></h1>
   <table >
     <tbody>
       <tr>
@@ -175,8 +175,8 @@
   <div class="overlay-content">
       
       
-        <h1 style="text-align:center;color:white;background-color:#ee7942;font-size:calc(4px + 0.9vw);font-family:Roboto;"><b>Jumlah Kejadian<br>per Jenis Bencana</h1>
-        <h1 style="text-align:center;color:white;font-size:calc(4px + 0.7vw);background-color:#990033;font-family:Roboto;"><b>Bencana Alam</b></h1>
+        <h1 style="text-align:center;color:white;background-color:#347aeb;font-size:calc(4px + 0.9vw);font-family:Roboto;"><b>Jumlah Kejadian<br>per Jenis Bencana</h1>
+        <h1 style="text-align:center;color:white;font-size:calc(4px + 0.7vw);background-color:#942237;font-family:Roboto;"><b>Bencana Alam</b></h1>
         <table>
           <tbody>
             <tr>
@@ -271,7 +271,7 @@ for (var i = 0; i < markers.length; i++) {
   var marker = L.marker([markers[i].lat, markers[i].lng]).addTo(map);
   var tooltip = L.tooltip({
     permanent: true,
-    direction: 'top'
+    direction: 'top',
   }).setContent(markers[i].name.split('<br>')[0]).setLatLng([markers[i].lat, markers[i].lng]).addTo(map);
 }
 
@@ -287,7 +287,7 @@ markers.forEach(function(marker) {
 var styleku = {
     "fillColor": "white",
     "color": "red",
-    "weight": 5,
+    "weight": 6,
 };
 
 function popUp(f, l) {
