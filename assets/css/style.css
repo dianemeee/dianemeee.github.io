@@ -182,6 +182,20 @@ p.small {
   line-height: 0.5;
 }
 
+#ember164 {
+	margin-top: 15px;
+}
+
+#ember164 .container-footer #ember172 .txt {
+	position:relative;
+	left:70%;
+	color:#ffffff;
+}
+
+#ember164 .container-footer #ember172 .txt p {
+	color:#ffffff;
+}
+
 
 @media screen and (max-height: 1080px) {
   .overlay a {font-size: 16px}
