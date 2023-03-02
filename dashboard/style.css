@@ -1,0 +1,61 @@
+body {
+    background: transparent;
+}
+
+#ember32 {
+    background-color: #fff;
+    color:black;
+    margin-bottom: 100px;
+}
+
+.site-header-thin {
+    padding: 2px 10px;
+    min-height: 36px;
+    display: grid;
+    grid-template-columns: auto max-content max-content;
+    justify-items: start;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.site-header-thin .burger-menu {
+    display: none;
+}
+
+.btn.btn-svg {
+    padding: 0;
+    border: none;
+    background: 0 0;
+    line-height: 0;
+}
+
+.site-header-thin .logo-and-title {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.site-header-thin a, .site-header-thin a:hover, .site-header-thin a:focus, .site-header-thin button.dropdown-toggle, .site-header .navbar-default a, .site-header .navbar-default a:focus, .site-header .navbar-default a:hover { color: black; }
+
+.site-header-thin .logo-and-title img {
+    max-height: 32px;
+    margin-right: 100px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.btn.btn-svg {
+    padding: 0;
+    border: none;
+    background: 0 0;
+    line-height: 0;
+}
+
+#ember252 img {
+    vertical-align: middle;
+    max-height: 32px;
+    margin-right: 10px;
+}
