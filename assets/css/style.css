@@ -227,3 +227,10 @@ p.small {
   line-height: 80px; /* menyesuaikan ketinggian baris dengan tinggi gambar */
   vertical-align: middle; /* mengatur posisi teks secara vertikal */
 }
+
+
+#ember252 img {
+  vertical-align: middle;
+  max-height: 50px;
+  margin-right: 0px;
+}
