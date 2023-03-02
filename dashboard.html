@@ -1,0 +1,481 @@
+<html lang="id" style="--vh:856px;" dir="ltr"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard Pendataan Pengungsi Bencana Banjir dan Tanah Longsor Jayapura 2022</title>
+    <meta name="description" content="ArcGIS Dashboards">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="icon" href="https://gis.bnpb.go.id/arcgis/apps/dashboards/assets/images/arcgis-dashboards-16-57c7bdca757e2544acb67f661775b0ba.png" type="image/png">
+    <link href="https://gis.bnpb.go.id/arcgis/jsapi/jsapi4/esri/themes/dark/main.css" rel="stylesheet" type="text/css" data-theme="api-dark">
+    <link rel="stylesheet" href="https://gis.bnpb.go.id/arcgis/apps/dashboards/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://gis.bnpb.go.id/arcgis/apps/dashboards/assets/app-dark-e13fe8ff444493a7f2df939736d0693e.css" data-theme="dark">
+    <link rel="stylesheet" href="https://gis.bnpb.go.id/arcgis/apps/dashboards/assets/app-light-d7cdf460d0048864a4cf4eee7e81bfe5.css" data-theme="light">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.rawgit.com/aparshin/leaflet-boundary-canvas/f00b4d35/src/BoundaryCanvas.js"></script>
+    <script src="../assets/js/leaflet.ajax.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+<link id="nordvpn-contentScript-extension-fonts" rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato"></head><body style="background: rgb(0, 0, 0);" class="ember-application">
+    
+    <style>
+text{
+    color:white;
+}
+    /* #maps{
+        position: relative;
+        border: 1px solid black;
+        border-radius: 8px;
+        height: 600px;
+        width: 80%;
+        margin: auto;
+    } */
+    #map{
+      width: 1073;
+      height: 759;
+      position: relative;
+      border-style: solid;
+      z-index: 0;
+      margin: 0px;
+      padding: 0px;
+      margin: auto;
+      padding-bottom: 30px;
+    }
+</style>
+
+
+<canvas id="skf_canvas" style="display: none;"></canvas><div id="skf_canvases_room" style="display: none;"></div><div class="full-page-container">
+  <div class="flex-vertical full panel panel-no-border panel-no-padding position-relative dashboard-page">
+  
+<!---->
+  <!---->
+
+  
+<!---->
+  
+    <div class="dashboard-container flex-fluid flex-vertical overflow-hidden">
+  
+        <div class="panel-container flex-vertical top-panel-container flex-fix" style="--dashboard-element-background-color:#1a1a1a; --dashboard-text-color:#ffff00; --dashboard-secondary-text-color:rgba(255, 255, 0, 0.8); --dashboard-text-color-light:rgba(255, 255, 0, 0.2); --dashboard-text-color-lighter:rgba(255, 255, 0, 0.05); background: #000;">
+  <div class="margin-container">
+<!---->
+    <div class="full-container">
+        <div class="header-panel flex-horizontal large">
+    <div class="flex-fix align-self-center margin-left-1">
+        <img src="dashboard/assets/img/logo.png" alt="" role="none" style="height: 100%; width: 100%;">
+    </div>
+
+    <div class="flex-fix align-self-center allow-shrink margin-left-1 flex-vertical">
+      <div class="title no-pointer-events text-ellipsis margin-right-half">
+        Data Distrik Fokour
+      </div>
+      <div class="subtitle text-ellipsis no-pointer-events">
+        Update: 9 Januari 2022
+      </div>
+    </div>
+
+  <div class="selectors-container flex-fluid flex-horizontal justify-content-end">
+        
+  </div>
+
+<!----></div>
+    </div>
+
+<!---->  </div>
+</div>
+
+<!---->
+
+      <div class="flex-fluid flex-horizontal position-relative overflow-hidden">
+<!---->
+          <div class="flex-fluid position-relative overflow-hidden">
+            <div class="position-absolute full margin-container">
+              <div class="dock-container" style="background: #000;">
+  <margin-container class="left top right bottom">
+    <full-container>
+        <div class="dock-element" style="left: 0px; top: 0px; width: 408.541px; height: 223.293px;">
+  <margin-container class="left right top bottom">
+    <full-container>
+      <div class="widget flex-vertical full-height indicator-widget">
+<!---->
+<!---->
+    <!---->
+
+    
+  <div class="widget-body flex-fluid full-width flex-vertical justify-content-center overflow-hidden" style="background: #343434;">
+    <div class="flex-vertical flex-fix allow-shrink">
+        <div class="responsive-text flex-vertical flex-fix allow-shrink indicator-top-text">
+  <svg class="responsive-text-group" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="-3.484962224960327 -1 872.83349609375 97.91352844238281" height="39.40990399489521">
+    <g class="responsive-text-icon" transform="translate(881.83349609375 0)">
+      <!---->
+    </g>
+
+    <g class="responsive-text-label" transform="translate(0 77.03382873535156)" style="--text-fill-color:#e69800;">
+      <text vector-effect="non-scaling-stroke" font-size="80px">
+        Total Jumlah Penduduk
+      </text>
+    </g>
+  </svg>
+</div>
+
+        <div class="responsive-text flex-vertical flex-fix allow-shrink indicator-center-text">
+  <svg class="responsive-text-group" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="-1 -1 293.80975341796875 194.6932830810547" height="140.85416666666666">
+    <g class="responsive-text-icon" transform="translate(302.80975341796875 0)">
+      <!---->
+    </g>
+
+    <g class="responsive-text-label" transform="translate(0 153.81524658203125)" style="--text-fill-color:#e69800;">
+      <text vector-effect="non-scaling-stroke" font-size="100px">
+        1,021
+      </text>
+    </g>
+  </svg>
+</div>
+
+<!---->    </div>
+  </div>
+
+
+<!---->
+<!----></div>
+    </full-container>
+  </margin-container>
+</div>
+        <div class="dock-element" style="left: 0px; top: 223.293px; width: 408.541px; height: 310.523px;">
+  <margin-container class="left right top bottom">
+    <full-container>
+      <div class="widget flex-vertical full-height serial-chart-widget chart-widget" style="background: #343434; color: white;">
+<!---->
+    <div class="flex-fix widget-header">
+      <div class="caption">
+        <p style="text-align:center">Jml. Penduduk Berdasarkan Jenis Kelamin</p>
+
+      </div>
+    </div>
+
+    <!---->
+
+    
+  <div class="widget-body flex-fluid full-width flex-vertical position-relative overflow-hidden" style="color: white;">
+    <div class="am-chart flex-fluid" role="button" style="overflow: hidden; text-align: left;"><div class="amcharts-main-div" style="position: relative;"><div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 376px; height: 267px; padding: 0px; touch-action: auto;"><svg version="1.1" style="position: absolute; width: 376px; height: 267px; top: -0.21875px; left: -0.5px;"><desc>JavaScript chart by amCharts 3.21.15</desc><g><path cs="100,100" d="M0.5,0.5 L375.5,0.5 L375.5,266.5 L0.5,266.5 Z" fill="#282828" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" class="amcharts-bg"></path><path cs="100,100" d="M0.5,0.5 L308.5,0.5 L308.5,212.5 L0.5,212.5 L0.5,0.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" class="amcharts-plot-area" transform="translate(47,20)"></path></g><g><g class="amcharts-category-axis" transform="translate(47,20)"><g><path cs="100,100" d="M77.5,0.5 L77.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.4" transform="translate(0,212)" class="amcharts-axis-tick"></path><path cs="100,100" d="M0.5,212.5 L0.5,212.5 L0.5,0.5" fill="none" stroke-width="1" stroke-dasharray="3" stroke-opacity="0.15" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M231.5,0.5 L231.5,5.5" fill="none" stroke-width="1" stroke-opacity="0.4" transform="translate(0,212)" class="amcharts-axis-tick"></path><path cs="100,100" d="M154.5,212.5 L154.5,212.5 L154.5,0.5" fill="none" stroke-width="1" stroke-dasharray="3" stroke-opacity="0.15" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M308.5,212.5 L308.5,212.5 L308.5,0.5" fill="none" stroke-width="1" stroke-dasharray="3" stroke-opacity="0.15" class="amcharts-axis-grid"></path></g></g><g class="amcharts-value-axis value-axis-valueAxisAuto0_1677760134575" transform="translate(47,20)" visibility="visible"><g><path cs="100,100" d="M0.5,212.5 L6.5,212.5" fill="none" stroke-width="1" stroke-opacity="0.5" transform="translate(-6,0)" class="amcharts-axis-tick"></path><path cs="100,100" d="M0.5,212.5 L0.5,212.5 L308.5,212.5" fill="none" stroke-width="1" stroke-dasharray="3" stroke-opacity="0.15" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,159.5 L6.5,159.5" fill="none" stroke-width="1" stroke-opacity="0.5" transform="translate(-6,0)" class="amcharts-axis-tick"></path><path cs="100,100" d="M0.5,159.5 L0.5,159.5 L308.5,159.5" fill="none" stroke-width="1" stroke-dasharray="3" stroke-opacity="0.15" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,106.5 L6.5,106.5" fill="none" stroke-width="1" stroke-opacity="0.5" transform="translate(-6,0)" class="amcharts-axis-tick"></path><path cs="100,100" d="M0.5,106.5 L0.5,106.5 L308.5,106.5" fill="none" stroke-width="1" stroke-dasharray="3" stroke-opacity="0.15" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,53.5 L6.5,53.5" fill="none" stroke-width="1" stroke-opacity="0.5" transform="translate(-6,0)" class="amcharts-axis-tick"></path><path cs="100,100" d="M0.5,53.5 L0.5,53.5 L308.5,53.5" fill="none" stroke-width="1" stroke-dasharray="3" stroke-opacity="0.15" class="amcharts-axis-grid"></path></g><g><path cs="100,100" d="M0.5,0.5 L6.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.5" transform="translate(-6,0)" class="amcharts-axis-tick"></path><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L308.5,0.5" fill="none" stroke-width="1" stroke-dasharray="3" stroke-opacity="0.15" class="amcharts-axis-grid"></path></g></g></g><g></g><g></g><g></g><g></g><g><g transform="translate(47,20)" class="amcharts-graph-column amcharts-graph-graphAuto0_1677760134576"><g><g class="amcharts-graph-column amcharts-graph-graphAuto0_1677760134576" transform="translate(15,212)" aria-label=" Laki-laki 50"><path cs="100,100" d="M0.5,0.5 L0.5,-105.5 L123.5,-105.5 L123.5,0.5 L0.5,0.5 Z" fill="#ffaa00" stroke="#ffaa00" fill-opacity="1" stroke-width="1" stroke-opacity="1" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g><g class="amcharts-graph-column amcharts-graph-graphAuto0_1677760134576" transform="translate(169,212)" aria-label=" Perempuan 50"><path cs="100,100" d="M0.5,0.5 L0.5,-105.5 L123.5,-105.5 L123.5,0.5 L0.5,0.5 Z" fill="#ffff00" stroke="#ffff00" fill-opacity="1" stroke-width="1" stroke-opacity="1" class="amcharts-graph-column-front amcharts-graph-column-element"></path></g></g></g></g><g></g><g><g class="amcharts-category-axis"><path cs="100,100" d="M0.5,0.5 L308.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.4" transform="translate(47,232)" class="amcharts-axis-line"></path></g><g class="amcharts-value-axis value-axis-valueAxisAuto0_1677760134575"><path cs="100,100" d="M0.5,0.5 L0.5,212.5" fill="none" stroke-width="1" stroke-opacity="0.5" transform="translate(47,20)" class="amcharts-axis-line" visibility="visible"></path></g></g><g></g><g></g><g><g transform="translate(47,20)" class="amcharts-graph-column amcharts-graph-graphAuto0_1677760134576"></g></g><g><g></g></g><g><g class="amcharts-category-axis" transform="translate(47,20)" visibility="visible"><text y="5" fill="" font-family="inherit" font-size="10px" opacity="1" text-anchor="middle" transform="translate(77,229)" class="amcharts-axis-label"><tspan y="5" x="0">Laki-laki</tspan></text><text y="5" fill="" font-family="inherit" font-size="10px" opacity="1" text-anchor="middle" transform="translate(231,229)" class="amcharts-axis-label"><tspan y="5" x="0">Perempuan</tspan></text></g><g class="amcharts-value-axis value-axis-valueAxisAuto0_1677760134575" transform="translate(47,20)" visibility="visible"><text y="5" fill="" font-family="inherit" font-size="10px" opacity="1" text-anchor="end" transform="translate(-12,211)" class="amcharts-axis-label"><tspan y="5" x="0">49</tspan></text><text y="5" fill="" font-family="inherit" font-size="10px" opacity="1" text-anchor="end" transform="translate(-12,158)" class="amcharts-axis-label"><tspan y="5" x="0">49,5</tspan></text><text y="5" fill="" font-family="inherit" font-size="10px" opacity="1" text-anchor="end" transform="translate(-12,105)" class="amcharts-axis-label"><tspan y="5" x="0">50</tspan></text><text y="5" fill="" font-family="inherit" font-size="10px" opacity="1" text-anchor="end" transform="translate(-12,52)" class="amcharts-axis-label"><tspan y="5" x="0">50,5</tspan></text><text y="5" fill="" font-family="inherit" font-size="10px" opacity="1" text-anchor="end" transform="translate(-12,-1)" class="amcharts-axis-label"><tspan y="5" x="0">51</tspan></text></g></g><g></g><g transform="translate(47,20)"></g><g></g><g></g></svg></div></div></div>
+  </div>
+
+
+<!---->
+<!----></div>
+    </full-container>
+  </margin-container>
+</div>
+        <div class="dock-element" style="left: 0px; top: 533.816px; width: 408.541px; height: 237.184px;">
+  <margin-container class="left right top bottom">
+    <full-container>
+      <div class="widget flex-vertical full-height pie-chart-widget chart-widget" style="background: #343434; color: white;">
+<!---->
+<!---->
+    <!---->
+
+    
+  <div class="widget-body flex-fluid full-width flex-vertical position-relative overflow-hidden">
+    <div class="am-chart flex-fluid" role="button" style="overflow: hidden; text-align: left;"><div class="amcharts-main-div" style="position: relative;"><div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 376px; height: 225px; padding: 0px; touch-action: auto;"><svg version="1.1" style="position: absolute; width: 376px; height: 225px; top: -0.1875px; left: -0.5px;"><desc>JavaScript chart by amCharts 3.21.15</desc><g><path cs="100,100" d="M0.5,0.5 L375.5,0.5 L375.5,224.5 L0.5,224.5 Z" fill="#282828" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" class="amcharts-bg"></path></g><g></g><g></g><g></g><g></g><g></g><g><g class="amcharts-pie-item" aria-label="Laki-laki: 50.00% 50 "><path cs="1000,1000" d=" M157.59440840897847,82.09440840897845 L131.4314575050762,55.931457505076196 A80,80,0,0,1,244.5685424949238,169.0685424949238 L218.40559159102153,142.90559159102153 A43,43,0,0,0,157.59440840897847,82.09440840897845 Z" fill="#ffaa00" stroke="#ffaa00" stroke-width="1" stroke-opacity="0" fill-opacity="1" class="amcharts-pie-slice"></path><path cs="100,100" d="M244.5,56.5 L258.5,42.5 L266.5,42.5" fill="none" stroke-opacity="0.5" class="amcharts-pie-tick" visibility="visible"></path></g><g class="amcharts-pie-item" aria-label="Perempuan: 50.00% 50 "><path cs="1000,1000" d=" M218.40559159102153,142.90559159102153 L244.5685424949238,169.0685424949238 A80,80,0,0,1,131.4314575050762,55.93145750507621 L157.59440840897844,82.09440840897847 A43,43,0,0,0,218.40559159102153,142.90559159102153 Z" fill="#ffff00" stroke="#ffff00" stroke-width="1" stroke-opacity="0" fill-opacity="1" class="amcharts-pie-slice"></path><path cs="100,100" d="M132.5,169.5 L118.5,183.5 L110.5,183.5" fill="none" stroke-opacity="0.5" class="amcharts-pie-tick" visibility="visible"></path></g></g><g></g><g><g><text y="6" fill="" font-family="inherit" font-size="11px" opacity="1" text-anchor="start" class="amcharts-pie-label" transform="translate(270,42)" style="cursor: default;" visibility="visible"><tspan y="6" x="0">Laki-laki 50%</tspan></text></g><g><text y="6" fill="" font-family="inherit" font-size="11px" opacity="1" text-anchor="end" class="amcharts-pie-label" transform="translate(106,183)" style="cursor: default;" visibility="visible"><tspan y="6" x="0">Perempuan 50%</tspan></text></g></g><g></g><g></g><g></g><g><g></g></g><g></g><g></g><g></g><g></g><g></g></svg></div></div></div>
+  </div>
+
+
+<!---->
+<!----></div>
+    </full-container>
+  </margin-container>
+</div>
+        <div class="dock-element" style="left: 408.541px; top: 0px; width: 1085.45px; height: 771px;">
+  <margin-container class="left right top bottom">
+    <full-container>
+      <div class="widget flex-vertical full-height map-widget">
+<!---->
+<!---->
+    <!---->
+
+    
+  <div class="widget-body flex-fluid full-width flex-vertical position-relative overflow-hidden">
+      <div class="map flex-fluid esri-view esri-view-width-large esri-view-width-greater-than-xsmall esri-view-width-greater-than-small esri-view-width-greater-than-medium esri-view-width-less-than-xlarge esri-view-orientation-landscape esri-view-height-small esri-view-height-greater-than-xsmall esri-view-height-less-than-medium esri-view-height-less-than-large esri-view-height-less-than-xlarge"><div class="esri-view-root"><div class="esri-view-surface esri-view-surface--touch-none" role="application" tabindex="0">
+        <div id="map" class="container-fluid"></div>></canvas></div><div class="esri-overlay-surface"><div style="visibility: hidden;"></div></div><div class="esri-ui calcite-theme-dark" style="inset: 0px;"><div class="esri-ui-inner-container esri-ui-corner-container" style="inset: 15px 15px 30px;"><div class="esri-ui-top-left esri-ui-corner"><div class="flex-horizontal no-pointer-events map-toolbar-left esri-component">
+<!---->  </div></div><div class="esri-ui-top-right esri-ui-corner"><div class="map-toolbar-right flex-horizontal auto-pointer-events align-self-end esri-component">
+      <div class="flex-horizontal align-items-center">
+<!---->        <button class="search-tool btn btn-clear">
+          <span class="icon-element">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16px" height="16px"><path d="M14.482 13.784L9.708 9.011a4.8 4.8 0 1 0-.69.69l4.773 4.773zM3.315 8.687a3.8 3.8 0 1 1 2.687 1.112 3.806 3.806 0 0 1-2.687-1.112z"></path><path fill="none" d="M0 0h16v16H0z"></path></svg>
+</span>
+        </button>
+      </div>
+
+      <nav class="flex-horizontal grouped-btn margin-left-half">
+          <button class="btn btn-clear">
+            <span class="icon-element rtl-mirror">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16px" height="16px"><path d="M3 1v4.5L.5 8H2v7h5v-4h2v4h5V8h1.5L8 .5l-2 2V1zm5 .914l5 5V14h-3v-4H6v4H3V6.914l1-1V2h1v2.914z"></path><path fill="none" d="M0 0h16v16H0z"></path></svg>
+</span>
+          </button>
+          <button class="btn btn-clear">
+            <span class="icon-element rtl-mirror">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16px" height="16px"><path d="M1 6.5A1.5 1.5 0 1 1 2.5 8 1.502 1.502 0 0 1 1 6.5zM15 2H6v1h9zM6 7h9V6H6zm0 4h9v-1H6zm0 4h9v-1H6zm-3.51-2L.87 16h3.257zM4 4H1V1h3zM3 2H2v1h1zm1 10H1V9h3zm-1-2H2v1h1zm-.5-4a.5.5 0 1 0 .5.5.5.5 0 0 0-.5-.5z"></path><path fill="none" d="M0 0h16v16H0z"></path></svg>
+</span>
+          </button>
+          <button class="btn btn-clear">
+            <span class="icon-element rtl-mirror">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16px" height="16px"><path d="M8.023 1.023l-8 4.5 8 4.5 8-4.5zm-5.96 4.5l5.96-3.352 5.96 3.352-5.96 3.353zm13.96 3l-8 4.5-8-4.5 1.02-.573 6.98 3.926 6.98-3.926zm-8 6.353l6.98-3.926 1.02.573-7.914 4.452a.175.175 0 0 1-.171 0L.023 11.523l1.02-.573z"></path><path fill="none" d="M0 0h16v16H0z"></path></svg>
+</span>
+          </button>
+          <button class="btn btn-clear">
+            <span class="icon-element rtl-mirror">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16px" height="16px"><path d="M16 3V0H9v7h7zm-1-2v1h-3V1zm-4 0v2h2v1h-3V1zm-1 5V5h4V3h1v3zM7 0H0v7h7zM6 4h-.33A2.674 2.674 0 0 1 3 1.33V1h3zM1 6V5h.561A.44.44 0 0 1 2 5.439V6zm2 0v-.561A1.44 1.44 0 0 0 1.561 4H1V1h1v.33A3.675 3.675 0 0 0 5.67 5H6v1zm13 3H9v7h7zm-6 6v-3h3v1h-1v1h1v1zm5 0h-1v-3h1zm0-4h-5v-1h5zM7 9H0v7h7zm-1 1v3.09a8.93 8.93 0 0 0-.314.057 2.863 2.863 0 0 1-.051-.12 3.112 3.112 0 0 0-.653-1.06c-.873-.872-1.18-1.093-1.977-1.093A3.301 3.301 0 0 0 1 12.024V10zm-5 5v-1.432l.11-.149a3.727 3.727 0 0 1 1.895-1.545c.397 0 .47 0 1.27.8a2.209 2.209 0 0 1 .438.742c.112.265.328.78.807.78a.816.816 0 0 0 .245-.041c.013-.005.079-.021.235-.05V15z"></path><path fill="none" d="M0 0h16v16H0z"></path></svg>
+</span>
+          </button>
+      </nav>
+  </div><div class="info-panel flex-vertical auto-pointer-events hide esri-component">
+<!---->    </div></div><div class="esri-ui-bottom-left esri-ui-corner"><div class="esri-component esri-scale-bar esri-widget"><div class="esri-scale-bar__bar-container esri-scale-bar__bar-container--ruler"><div class="esri-scale-bar__ruler" style="width: 132px;"><div class="esri-scale-bar__ruler-block"></div><div class="esri-scale-bar__ruler-block"></div><div class="esri-scale-bar__ruler-block"></div><div class="esri-scale-bar__ruler-block"></div></div><div class="esri-scale-bar__label-container esri-scale-bar__label-container--ruler"><div class="esri-scale-bar__label">0</div><div class="esri-scale-bar__label">20 km</div></div></div><div class="esri-scale-bar__bar-container esri-scale-bar__bar-container--ruler"><div class="esri-scale-bar__ruler" style="width: 106px;"><div class="esri-scale-bar__ruler-block"></div><div class="esri-scale-bar__ruler-block"></div><div class="esri-scale-bar__ruler-block"></div><div class="esri-scale-bar__ruler-block"></div></div><div class="esri-scale-bar__label-container esri-scale-bar__label-container--ruler"><div class="esri-scale-bar__label">0</div><div class="esri-scale-bar__label">10 mi</div></div></div></div></div><div class="esri-ui-bottom-right esri-ui-corner"><div class="esri-component esri-zoom esri-widget"><div class="esri-widget--button esri-widget esri-interactive" role="button" tabindex="0" title="Perbesar"><span aria-hidden="true" role="presentation" class="esri-icon esri-icon-plus"></span><span class="esri-icon-font-fallback-text">Perbesar</span></div><div class="esri-widget--button esri-widget esri-interactive" role="button" tabindex="0" title="Perkecil"><span aria-hidden="true" role="presentation" class="esri-icon esri-icon-minus"></span><span class="esri-icon-font-fallback-text">Perkecil</span></div></div></div></div><div class="esri-ui-inner-container esri-ui-manual-container"><div class="esri-component esri-attribution esri-widget"><div class="esri-attribution__sources esri-interactive" tabindex="0" role="button">Map data © OpenStreetMap contributors, CC-BY-SA</div><div class="esri-attribution__powered-by">Powered by <a class="esri-attribution__link esri-widget__anchor" href="http://www.esri.com/" target="_blank" rel="noreferrer">Esri</a></div></div><div class="esri-component" style="display: none;"></div><div class="esri-component" style="display: none;"></div></div></div></div><div class="esri-view-user-storage"></div></div>
+
+        
+
+<!---->
+
+        
+
+    
+
+  </div>
+
+
+<!---->
+<!----></div>
+    </full-container>
+  </margin-container>
+</div>
+        <div class="dock-element" style="left: 1493.99px; top: 0px; width: 416.011px; height: 152.297px;">
+  <margin-container class="left right top bottom">
+    <full-container>
+      <div class="widget flex-vertical full-height indicator-widget" style="--dashboard-element-background-color:#1a1a1a; --dashboard-text-color:#ffaa00; --dashboard-secondary-text-color:rgba(255, 170, 0, 0.8); --dashboard-text-color-light:rgba(255, 170, 0, 0.2); --dashboard-text-color-lighter:rgba(255, 170, 0, 0.05);">
+<!---->
+<!---->
+    <!---->
+
+    
+  <div class="widget-body flex-fluid full-width flex-vertical justify-content-center overflow-hidden" style="background: #343434">
+    <div class="flex-vertical flex-fix allow-shrink">
+        <div class="responsive-text flex-vertical flex-fix allow-shrink indicator-top-text">
+  <svg class="responsive-text-group" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="-1 -1 923.5524291992188 98.84769439697266" height="38.394419927385194">
+    <g class="responsive-text-icon" transform="translate(932.5524291992188 0)">
+      <!---->
+    </g>
+
+    <g class="responsive-text-label" transform="translate(0 77.24817657470703)">
+      <text vector-effect="non-scaling-stroke" font-size="80px">
+        Jumlah Total Bencana
+      </text>
+    </g>
+  </svg>
+</div>
+
+        <div class="responsive-text flex-vertical flex-fix allow-shrink indicator-center-text">
+  <svg class="responsive-text-group" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="-1 -1 98.61532592773438 194.7506103515625" height="93.53125">
+    <g class="responsive-text-icon" transform="translate(107.61532592773438 0)">
+      <!---->
+    </g>
+
+    <g class="responsive-text-label" transform="translate(0 152.8477020263672)">
+      <text vector-effect="non-scaling-stroke" font-size="160px">
+        1
+      </text>
+    </g>
+  </svg>
+</div>
+
+<!---->    </div>
+  </div>
+
+
+<!---->
+<!----></div>
+    </full-container>
+  </margin-container>
+</div>
+        <div class="dock-element" style="left: 1493.99px; top: 152.297px; width: 416.011px; height: 618.703px;">
+  <margin-container class="left right top bottom">
+    <full-container>
+      <div class="widget flex-vertical full-height details-widget" style="background: #343434; color: white">
+<!---->
+<!---->
+    <!---->
+
+    
+  <div class="widget-body flex-fluid full-width flex-vertical overflow-y-auto overflow-x-hidden">
+    <div class="feature-widget esri-feature esri-widget"><div class="esri-feature__size-container">
+        <div class="esri-feature__main-container"><div>
+            <div class="esri-feature__content-element">
+                <div class="esri-feature-fields">
+                    <div class="esri-feature-element-info"></div>
+                    <table class="esri-widget__table" summary="Daftar atribut dan nilai"><tbody>
+                        <tr>
+                            <th class="esri-feature-fields__field-header">Gempa Bumi</th>
+                            <td class="esri-feature-fields__field-data">9</td>
+                        </tr>
+                        <tr>
+                            <th class="esri-feature-fields__field-header">Gunungapi</th>
+                            <td class="esri-feature-fields__field-data">1</td>
+                        </tr>
+                        <tr>
+                            <th class="esri-feature-fields__field-header">Kebakaran Hutan / Lahan</th>
+                            <td class="esri-feature-fields__field-data">32</td>
+                        </tr>
+                        <tr>
+                            <th class="esri-feature-fields__field-header">Kekeringan</th>
+                            <td class="esri-feature-fields__field-data">0</td>
+                        </tr>
+                        <tr>
+                            <th class="esri-feature-fields__field-header">Banjir</th>
+                            <td class="esri-feature-fields__field-data">195</td>
+                        </tr>
+                        <tr>
+                            <th class="esri-feature-fields__field-header">Tanah Longsor</th>
+                            <td class="esri-feature-fields__field-data">85</td>
+                        </tr>
+                        <tr>
+                            <th class="esri-feature-fields__field-header">Cuaca Ekstrem</th>
+                            <td class="esri-feature-fields__field-data">154</td>
+                        </tr>
+                        <tr>
+                            <th class="esri-feature-fields__field-header">Gelombang Pasang/Abrasi</th>
+                            <td class="esri-feature-fields__field-data">7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="esri-feature__last-edited-info esri-feature__content-element">Terakhir diedit oleh bidangdata pada 9/1/2022, 12.19.</div></div></div></div>
+  </div>
+
+
+<!---->
+    <div class="flex-fix flex-horizontal align-items-center widget-status padding-right-quarter padding-left-quarter">
+<!---->      <div class="flex-fluid"></div>
+        <div class="flex-fix">
+          <i>
+            Terakhir diperbarui: 2 menit yang lalu
+          </i>
+        </div>
+    </div>
+</div>
+    </full-container>
+  </margin-container>
+</div>
+
+<!---->
+          <a class="dock-expand" style="left: 408.541px; top: 533.816px;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12px" height="12px">
+      <path vector-effect="non-scaling-stroke" d="M9.645 5.648L13.244 2h-3.205V1h4.9v5h-1V2.719l-3.584 3.633zm-4 4L2.06 13.281V10h-1v5h4.9v-1H2.756l3.6-3.648zM14 10.04v3.205l-3.648-3.6-.704.711 3.633 3.584H10v1h5v-4.9zM2 2.756l3.648 3.6.704-.711L2.719 2.06H6v-1H1v4.9h1z"></path>
+  </svg>
+</a>
+
+<!---->
+<!---->    </full-container>
+  </margin-container>
+</div>
+            </div>
+          </div>
+      </div>
+    
+</div>
+
+<!---->  
+
+</div>
+<!----></div>
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "18%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    
+    // var map = L.map("map");
+    
+    // $.getJSON('assets/geojson/sorsel1.geojson').then(function(geoJSON) {
+    //   var osm = new L.TileLayer.BoundaryCanvas("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    //     boundary: geoJSON,
+    //     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, UK shape <a href="https://github.com/johan/world.geo.json">johan/word.geo.json</a>'
+    //   });
+    //   map.addLayer(osm);
+    //   var ukLayer = L.geoJSON(geoJSON);
+    //   map.fitBounds(ukLayer.getBounds());
+    // });
+    
+    var map = L.map('map').setView([-1.126554, 132.015484], 13);
+    
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+    }).addTo(map);
+    
+    var markers = [
+      {lat: -1.126554, lng: 132.015484, name: "Distrik Fokour<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button>"},
+      {lat: -1.196927, lng: 131.932680, name: "Distrik Sawiat<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -1.391602, lng: 131.972203, name: "Distrik Seremuk<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -1.418412, lng: 132.047973, name: "Distrik Teminabuan<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -1.539788, lng: 132.150002, name: "Distrik Wayer<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -1.576880, lng: 132.014773, name: "Distrik Konda<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -1.517235, lng: 132.251178, name: "Distrik Moswaren<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -1.756552, lng: 132.203253, name: "Distrik Kais<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -1.979353, lng: 132.156358, name: "Distrik Matemani<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -2.162970, lng: 132.366177, name: "Distrik Kokoda<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -1.975350, lng: 132.398148, name: "Distrik Kokoda Utara<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+      {lat: -2.096442, lng: 132.221876, name: "Distrik Inanwatan<br>Data Penduduk: xxx.xxx.xxx<br><br><button class=\"btn btn-success btn-sm\"><a href=\"dashboard.html\" style=\"color:inherit\"> Detail </a></button"},
+    ];
+    
+    // membuat marker dan tooltip
+    for (var i = 0; i < markers.length; i++) {
+      var marker = L.marker([markers[i].lat, markers[i].lng]).addTo(map);
+      var tooltip = L.tooltip({
+        permanent: true,
+        direction: 'top',
+      }).setContent(markers[i].name.split('<br>')[0]).setLatLng([markers[i].lat, markers[i].lng]).addTo(map);
+    }
+    
+    markers.forEach(function(marker) {
+      var m = L.marker([marker.lat, marker.lng]).addTo(map);
+      m.bindPopup("<b>" + marker.name + "</b>");
+      m.on('click', function(e) {
+        m.openPopup();
+      });
+    });
+    
+    
+    var styleku = {
+        "fillColor": "white",
+        "color": "red",
+        "weight": 6,
+    };
+    
+    function popUp(f, l) {
+        var out = [];
+        if (f.properties) {
+            for (key in f.properties) {
+                out.push(key + ": " + "<b>" + f.properties[key] + "</b>");
+            }
+            l.bindPopup(out.join("<br />"));
+        }
+    }
+    
+    var geojson = new L.GeoJSON.AJAX(["../assets/geojson/map.geojson"],{onEachFeature:popUp, style:styleku}).addTo(map);
+    </script>
+         
+    <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="assets/js/scripts.js"></script>
+    
+    </body>
+    </html>
+    

@@ -1,4 +1,8 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700";
+
+
 body {
+  font-family: 'Roboto', sans-serif;
   padding-bottom: 20px;
 }
 
@@ -58,10 +62,7 @@ ul {
   display: block;
   padding: 5px 0;
 }
-@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700";
-body {
-  font-family: 'Roboto', sans-serif;
-}
+
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
@@ -180,20 +181,6 @@ html, body, .container-fluid{
 
 p.small {
   line-height: 0.5;
-}
-
-#ember164 {
-	margin-top: 15px;
-}
-
-#ember164 .container-footer #ember172 .txt {
-	position:relative;
-	left:70%;
-	color:#ffffff;
-}
-
-#ember164 .container-footer #ember172 .txt p {
-	color:#ffffff;
 }
 
 
